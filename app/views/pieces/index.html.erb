@@ -1,3 +1,10 @@
+<div> </div>
 <h1>Портфолио Нади</h1>
 
 <%= render 'form' %>
+
+<div>
+  <% @pieces.each do |piece| %>
+    <p><%= image_tag piece.image.url %></p>
+  <% end %>
+</div>
