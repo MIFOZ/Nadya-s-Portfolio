@@ -4,4 +4,8 @@ def index
   @piece = Piece.new
 end
 
+def create
+  
+  
+
 end
