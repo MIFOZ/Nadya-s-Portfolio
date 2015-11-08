@@ -1,10 +1,24 @@
-<div> </div>
-<h1>Портфолио Нади</h1>
+<div class="header container">
+  <header>
+    <%= link_to 'Nadya\'s Portfolio', root_url, id: "title" %>
+    <div id="menu">
+      <ul>
+        <li><%= link_to 'Home' %></li>
+        <li><%= link_to 'About Me' %></li>
+        <li><%= link_to 'Contacts' %></li>
+      </ul>
+    </div>
+  </header>
+</div>
 
 <%= render 'form' %>
 
-<div>
-  <% @pieces.each do |piece| %>
-    <p><%= image_tag piece.image.url %></p>
-  <% end %>
-</div>
+<section>
+  <div class="content container">
+    <ul class="grid">
+      <% @pieces.each do |piece| %>
+        <%= render piece, :piece => piece %>
+      <% end %>
+    </ul>
+  </div>
+</section>

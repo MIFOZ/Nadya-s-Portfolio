@@ -15,12 +15,13 @@ class PiecesController < ApplicationController
     end
   end
 
+  def destroy
+    Piece.find(params[:id]).destroy
+    redirect_to pieces_path
+  end
+
   def allowed_params
     params.require(:piece).permit(:title, :image)
   end
-
-def create
-  
-  
 
 end
